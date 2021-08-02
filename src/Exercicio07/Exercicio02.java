@@ -24,7 +24,7 @@ public class Exercicio02 {
 			System.out.print("Digite o preço: R$ ");
 			Double price = sc.nextDouble();
 			
-			vect[i] = new product(name,price);
+			vect[i] = new product(name, price);
 			
 			if(i==(n-1)) {
 				for(int i2=0; i2<n; i2++) {
