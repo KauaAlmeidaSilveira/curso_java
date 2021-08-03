@@ -9,19 +9,22 @@ import entities.enums.OrderStatus;
 
 public class Order {
 
-	private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 	
 	private Date moment;
 	private OrderStatus status;
 	
-	private Client client;
-	private List<OrderItem> orderItem = new ArrayList<>();
+	Client cli = new Client();
+	List<OrderItem> orderItems = new ArrayList<>();
+	
+	public Order() {
 
+	}
 
-	public Order(Date moment, OrderStatus status, Client client) {
+	public Order(Date moment, OrderStatus status, Client cli) {
 		this.moment = moment;
 		this.status = status;
-		this.client = client;
+		this.cli = cli;
 	}
 
 	public Date getMoment() {
@@ -40,30 +43,34 @@ public class Order {
 		this.status = status;
 	}
 
-	public List<OrderItem> getOrderItem() {
-		return orderItem;
+	public Client getCli() {
+		return cli;
 	}
 
-	public void addItem(OrderItem orderItems) {
-		
-		this.orderItem.add(orderItems);
-		
+	public void setCli(Client cli) {
+		this.cli = cli;
+	}
+
+	public List<OrderItem> getOrderItem() {
+		return orderItems;
+	}
+
+	public void addItem(OrderItem orderItem) {	
+		orderItems.add(orderItem);	
 	}
 	
-	public void removeItem(OrderItem orderItems) {
-		
-		this.orderItem.remove(orderItems);
-		
+	public void removeItem(OrderItem orderItem) {	
+		orderItems.remove(orderItem);	
 	}
 	
-	public Double total() {
-		double sum=0;
+	public double total() {
+		double soma = 0;
 		
-		for(OrderItem item : orderItem) {
-			sum += item.subTotal();
+		for(OrderItem oI : orderItems) {
+			soma += oI.subTotal();
 		}
 		
-		return sum;
+		return soma;
 	}
 	
 	@Override
@@ -72,19 +79,16 @@ public class Order {
 		StringBuilder sb = new StringBuilder();
 		
 		sb.append("Order moment: ");
-		sb.append(sdf.format(moment)+"\n");
+		sb.append(sdf.format(moment)+ "\n");
 		sb.append("Order Status: ");
-		sb.append(status + "\n");
-		sb.append(client+ "\n");
-		sb.append("Order Items: \n");
-		for(OrderItem i : orderItem) {
-			sb.append(i+"\n");
+		sb.append(status+"\n");
+		sb.append(cli+"\n");
+		sb.append("Order items: \n");
+		for(OrderItem oI : orderItems) {
+			sb.append(oI+"\n");
 		}
-		sb.append("Total price: ");
-		sb.append(String.format("%.2f", total()));
-		
+		sb.append("Total price: "+ total());
 		
 		return sb.toString();
 	}
-	
 }
