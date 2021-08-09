@@ -5,7 +5,7 @@ public class businessAccount extends Account{
 	private Double loanLimit;
 	
 	public businessAccount() {
-
+		super();
 	}
 
 	public businessAccount(Integer number, String holder, Double balance, Double loanLimit) {
@@ -23,15 +23,14 @@ public class businessAccount extends Account{
 	
 	public void loan(Double amount) {
 		if(amount <= loanLimit) {
-			balance += amount - 10;
+			balance += amount - 10.0;
 		}
 		
 	}
 	
 	@Override
 	public void withdrawn(double amount) {	
-		super.withdrawn(amount);
-		balance -= 2;	
+		balance -= amount + 7.0;
 	}
 	
 }

@@ -7,6 +7,10 @@ public class rent {
 	private int numQ;
 	
 	
+	public rent() {
+		
+	}
+	
 	public String toString() {
 		return name+", "+ email;
 	}
@@ -17,6 +21,7 @@ public class rent {
 		this.numQ = numQ;
 	}
 	
+
 	public String getName() {
 		return name;
 	}

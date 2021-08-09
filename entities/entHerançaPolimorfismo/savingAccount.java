@@ -1,6 +1,6 @@
 package entHerançaPolimorfismo;
 
-public final class savingAccount extends Account{
+public class savingAccount extends Account{
 
 	private Double interestRate;
 	
@@ -21,13 +21,14 @@ public final class savingAccount extends Account{
 		this.interestRate = interestRate;
 	}
 	
-	public void updateBalance() {
-		balance -= balance * interestRate;
+	public void updateBalance() {	
+		balance += balance * interestRate;
 	}
 	
 	@Override
 	public void withdrawn(double amount) {	
 		balance -= amount;	
 	}
+	
 	
 }
