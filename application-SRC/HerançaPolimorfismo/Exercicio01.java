@@ -1,6 +1,10 @@
 package HerançaPolimorfismo;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import entHerançaPolimorfismo.Account;
+import entHerançaPolimorfismo.businessAccount;
 import entHerançaPolimorfismo.savingAccount;
 
 
@@ -8,33 +12,30 @@ public class Exercicio01 {
 
 	public static void main(String[] args) {
 		
-		/*Account acc1 = new Account(10, "Alex", 1000.0);
+		List<Account> list = new ArrayList<>();
 		
-		acc1.withdrawn(200.0);
+		list.add(new savingAccount(1001, "Alex", 500.0, 0.01));
 		
-		System.out.println(acc1.getBalance());
+		list.add(new businessAccount(1002, "Maria", 1000.0, 400.0));
 		
-		Account acc2 = new savingAccount(11, "Maria", 1000.0, 0.05);
+		list.add(new savingAccount(1003, "bob", 1000.0, 0.01));
 		
-		acc2.withdrawn(200.0);
+		list.add(new businessAccount(1004, "Gleice", 1500.0, 700.0));
 		
-		System.out.println(acc2.getBalance());
+		double sum=0;
 		
-		Account acc3 = new businessAccount(12, "João", 1000.0, 500.0);
+		for(Account acc : list) {
+			acc.deposit(10);
+		}
 		
-		acc3.withdrawn(200.0);
+		for(Account acc : list) {
+			sum += acc.getBalance();
+		}
 		
-		System.out.println(acc3.getBalance());*/
+		System.out.print("Total price: "+ sum);
 		
-		Account x = new Account(1020, "Alex", 1000.0);
-		Account y  = new savingAccount(1023, "Maria", 1000.0, 0.05);
+	
 		
-		x.withdrawn(50.0);
-		y.withdrawn(50.0);
-		
-		System.out.println("x: " + x.getBalance());
-		
-		System.out.println("y: " + y.getBalance());
 		
 		
 	}
