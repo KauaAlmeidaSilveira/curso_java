@@ -7,7 +7,7 @@ public class Exercicio01 {
 
 	public static void main(String[] args) {
 		
-	method2();
+	method1();
 	
 	
 	System.out.println();
@@ -17,9 +17,15 @@ public class Exercicio01 {
 
 	}
 
+	public static void method1() {
+		System.out.println("METHOD1 START");
+		method2();
+		System.out.println("METHOD1 FINISH");	
+	}
+	
 	public static void method2() {
 		
-		System.out.println("METHOD 2 START");
+		System.out.println("METHOD2 START");
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -36,12 +42,15 @@ public class Exercicio01 {
 			}	
 			catch(ArrayIndexOutOfBoundsException e) {
 				System.out.println("Invalid position!!");
+				e.printStackTrace();
+				sc.next();
 			}
 			catch(InputMismatchException e) {
 				System.out.println("Input error!!");
 			}
 	
 		sc.close();
+		System.out.println("METHOD2 FINISH");
 	}
 	
 }
