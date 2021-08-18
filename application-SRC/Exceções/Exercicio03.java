@@ -42,11 +42,7 @@ public class Exercicio03 {
 			System.out.println();
 		
 	
-		if(resp == 'y') {
-			
-			Date inPast = checkin;
-			Date outPast = checkout;
-			
+		if(resp == 'y') {		
 			System.out.println("Enter data to update the reservation: ");
 			
 			System.out.print("Check-in date(dd/mm/yyy): ");
@@ -54,22 +50,19 @@ public class Exercicio03 {
 			
 			System.out.print("Check-out date(dd/mm/yyy): ");
 			checkout = sdf.parse(sc.next());
-			
-			if(checkin.before(inPast) && checkout.before(outPast)) {
-				System.out.println("Error in reservation :  reservation dates must be future dates");
-			}
-			else if(!checkout.after(checkin)){
-				System.out.println("Error in reservation : check-out date must be after check-in date");
+		
+			String error = reserv.updateDate(checkin, checkout);
+				
+			if(error != null) {
+				System.out.println("Error in reservation: "+error);
 			}else {
-				reserv.updateDate(checkin, checkout);
-				
 				System.out.println(reserv);
-					
-				System.out.println();
-					
-				System.out.print("Thank you, have a good night!!");
 			}
-				
+		
+			System.out.println();
+					
+			System.out.print("Thank you, have a good night!!");
+	
 		}	
 			
 		else{

@@ -11,6 +11,7 @@ public class Reservation {
 	private Date checkout;
 
 	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+
 	
 	public Reservation() {
 
@@ -21,7 +22,7 @@ public class Reservation {
 		this.checkin = checkin;
 		this.checkout = checkout;
 	}
-
+	
 	public Integer getRoomNumber() {
 		return roomNumber;
 	}
@@ -45,10 +46,21 @@ public class Reservation {
 		return TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
 	}
 	
-	public void updateDate(Date checkin, Date checkout) {	
+	public String updateDate(Date checkin, Date checkout) {	
+		
+		Date inPast = this.checkin;
+		Date outPast = this.checkout;
+	
+		if(checkin.before(inPast) && checkout.before(outPast)) {
+			return "Reservation dates must be future dates";
+		}
+		if(!checkout.after(checkin)){
+			return "Check-out date must be after check-in date";
+		}
 		
 		this.checkin = checkin;
 		this.checkout = checkout;
+		return null;
 	}
 	
 	@Override
