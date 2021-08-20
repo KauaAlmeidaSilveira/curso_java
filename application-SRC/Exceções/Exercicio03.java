@@ -3,10 +3,10 @@ package Exceções;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.InputMismatchException;
+
 import java.util.Scanner;
 
-import entReservation.Reservation;
+import entExceções.Reservation;
 import exceptions.DomainException;
 
 public class Exercicio03 {

@@ -1,4 +1,4 @@
-package entReservation;
+package entExceções;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
