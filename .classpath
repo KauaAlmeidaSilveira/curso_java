@@ -8,5 +8,6 @@
 	<classpathentry kind="src" path="application-SRC"/>
 	<classpathentry kind="src" path="entities"/>
 	<classpathentry kind="src" path="Exceptions"/>
+	<classpathentry kind="src" path="services"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
