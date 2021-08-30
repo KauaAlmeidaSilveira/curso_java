@@ -8,7 +8,7 @@ public class rentalService {
 	private Double pricePerHour;
 	private Double pricePerDay;
 	
-	private brazilTaxService brTax;
+	private taxService brTax;
 	
 	
 	public rentalService() {
@@ -16,7 +16,7 @@ public class rentalService {
 	}
 
 
-	public rentalService(Double pricePerHour, Double pricePerDay, brazilTaxService brTax) {
+	public rentalService(Double pricePerHour, Double pricePerDay, taxService brTax) {
 		this.pricePerHour = pricePerHour;
 		this.pricePerDay = pricePerDay;
 		this.brTax = brTax;
@@ -43,12 +43,12 @@ public class rentalService {
 	}
 
 
-	public brazilTaxService getBrTax() {
+	public taxService getBrTax() {
 		return brTax;
 	}
 
 
-	public void setBrTax(brazilTaxService brTax) {
+	public void setBrTax(taxService brTax) {
 		this.brTax = brTax;
 	}
 	

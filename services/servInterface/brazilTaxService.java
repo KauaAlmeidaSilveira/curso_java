@@ -1,6 +1,6 @@
 package servInterface;
 
-public class brazilTaxService {
+public class brazilTaxService implements taxService{
 
 	public double tax(double amount) {
 		if(amount <= 100.0) {
