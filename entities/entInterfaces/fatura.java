@@ -1,15 +1,15 @@
 package entInterfaces;
 
-public class Invoice {
+public class fatura {
 
 	private Double basicPayment;
 	private Double tax;
 	
-	public Invoice() {
+	public fatura() {
 
 	}
 
-	public Invoice(Double basicPayment, Double tax) {
+	public fatura(Double basicPayment, Double tax) {
 		this.basicPayment = basicPayment;
 		this.tax = tax;
 	}
@@ -33,5 +33,4 @@ public class Invoice {
 	public Double getTotalPayment() {
 		return getBasicPayment() + getTax();
 	}
-	
 }

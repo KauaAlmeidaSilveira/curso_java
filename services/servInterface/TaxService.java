@@ -1,6 +1,6 @@
 package servInterface;
 
-public interface taxService {
+public interface TaxService {
 
 	double tax(double amount);
 	
