@@ -8,26 +8,32 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import entInterfaces.Funcionarios;
+
 public class Exercicio05 {
 
 	public static void main(String[] args) throws FileNotFoundException, IOException {
 	
-		List<String> list = new ArrayList<>();
-		
-		String path = "C:\\Users\\kauaa\\Desktop\\Tudo\\Programação\\WorkSpace\\curso_java\\Arquivo\\names.csv";
+		List<Funcionarios> list = new ArrayList<>();
+	
+		String path = "C:\\Users\\kauaa\\Desktop\\Tudo\\Programação\\WorkSpace\\curso_java\\Arquivo\\funcionarios.txt";
 
 		try(BufferedReader br = new BufferedReader(new FileReader(path))){
 			
-			String name = br.readLine();
-			while(name != null) {
-				list.add(name);
-				name = br.readLine();
+			String FuncionarioCsv = br.readLine();
+			
+			while(FuncionarioCsv != null) {
+				String[] fields = FuncionarioCsv.split(",");
+				
+				list.add(new Funcionarios(fields[0], Double.parseDouble(fields[1])));
+				
+				FuncionarioCsv = br.readLine();
 			}
 			
 			Collections.sort(list); //Serve para ordenar os dados em ordem alfabetica
 			
-			for(String names : list) {
-				System.out.println(names);
+			for(Funcionarios func : list) {
+				System.out.println(func.getName()+", "+func.getSalary());
 			}
 			
 		}catch(IOException e) {
