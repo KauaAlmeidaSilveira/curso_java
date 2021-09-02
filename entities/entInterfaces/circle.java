@@ -2,7 +2,7 @@ package entInterfaces;
 
 import entEnums.Color;
 
-public class circle extends Shape{
+public class circle extends AbstractShape{
 
 	private Double radios;
 
@@ -20,7 +20,7 @@ public class circle extends Shape{
 	}
 
 	@Override
-	public Double area() {
+	public double area() {
 		return Math.PI*Math.pow(radios, 2);
 	}
 	

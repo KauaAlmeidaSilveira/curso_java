@@ -1,4 +1,4 @@
-/*package entInterfaces;
+package entInterfaces;
 
 import entEnums.Color;
 
@@ -7,7 +7,6 @@ public abstract class AbstractShape implements Shape{
 	private Color color;
 
 	public AbstractShape(Color color) {
-		super();
 		this.color = color;
 	}
 
@@ -19,7 +18,4 @@ public abstract class AbstractShape implements Shape{
 		this.color = color;
 	}
 
-	
-	
 }
-*/

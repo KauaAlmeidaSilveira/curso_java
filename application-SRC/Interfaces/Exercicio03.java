@@ -2,16 +2,16 @@ package Interfaces;
 
 import entEnums.Color;
 import entInterfaces.rectangle;
-import entInterfaces.Shape;
+import entInterfaces.AbstractShape;
 import entInterfaces.circle;
 
 public class Exercicio03 {
 
 	public static void main(String[] args) {
 		
-		Shape s1 = new rectangle(Color.BLACK, 3.00, 4.00);
+		AbstractShape s1 = new rectangle(Color.BLACK, 3.00, 4.00);
 		
-		Shape s2 = new circle(Color.BLUE, 2.0);
+		AbstractShape s2 = new circle(Color.BLUE, 2.0);
 		
 		System.out.println("Circle color: " + s2.getColor());
 		System.out.println("Circle area: " + String.format("%.2f", s2.area()));

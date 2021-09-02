@@ -2,7 +2,7 @@ package entInterfaces;
 
 import entEnums.Color;
 
-public class rectangle extends Shape{
+public class rectangle extends AbstractShape{
 
 	private Double height;
 	private Double width;
@@ -35,7 +35,7 @@ public class rectangle extends Shape{
 	}
 	
 	@Override
-	public Double area() {
+	public double area() {
 		return height*width;
 	}
 	
