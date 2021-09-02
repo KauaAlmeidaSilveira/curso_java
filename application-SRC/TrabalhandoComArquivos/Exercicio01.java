@@ -8,7 +8,7 @@ public class Exercicio01 {
 
 	public static void main(String[] args) {
 		
-		File file = new File("C:\\Users\\kauaa\\Desktop\\Tudo\\Programação\\WorkSpace\\curso_java\\in.txt");
+		File file = new File("C:\\Users\\kauaa\\Desktop\\Tudo\\Programação\\WorkSpace\\curso_java\\Arquivo\\in.csv");
 		
 		Scanner sc = null;
 		
