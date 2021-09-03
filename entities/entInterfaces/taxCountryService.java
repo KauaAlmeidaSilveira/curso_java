@@ -1,0 +1,15 @@
+package entInterfaces;
+
+import java.security.InvalidParameterException;
+
+public interface taxCountryService {
+	
+	double getInterestRate();
+	
+	default Double payment(Double amount, int months) {
+		if(months < 1) {
+			throw new InvalidParameterException("Months must be greater than zero");
+		}
+		return amount * Math.pow((1 + getInterestRate()/100), months);		
+	}
+}
