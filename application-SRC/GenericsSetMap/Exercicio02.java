@@ -41,6 +41,8 @@ public class Exercicio02 {
 			System.out.println("Error: "+ e.getMessage());
 		}
 		
+		
+		
 		sc.close();
 	}
 
