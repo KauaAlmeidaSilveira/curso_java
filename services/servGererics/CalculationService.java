@@ -1,4 +1,4 @@
-package servGerericsSetMap;
+package servGererics;
 
 import java.util.List;
 

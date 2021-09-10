@@ -1,4 +1,4 @@
-package GenericsSetMap;
+package Generics;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -8,8 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import entGenericsSetMap.Product;
-import servGerericsSetMap.CalculationService;
+import entGenerics.Product;
+import servGererics.CalculationService;
 
 public class Exercicio02 {
 

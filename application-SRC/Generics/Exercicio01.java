@@ -1,8 +1,8 @@
-package GenericsSetMap;
+package Generics;
 
 import java.util.Scanner;
 
-import servGerericsSetMap.printService;
+import servGererics.printService;
 
 public class Exercicio01 {
 

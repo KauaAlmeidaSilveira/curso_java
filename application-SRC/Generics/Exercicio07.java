@@ -1,6 +1,6 @@
-package GenericsSetMap;
+package Generics;
 
-import entGenericsSetMap.Client;
+import entGenerics.Client;
 
 public class Exercicio07 {
 

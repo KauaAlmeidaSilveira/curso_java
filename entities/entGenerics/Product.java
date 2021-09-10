@@ -1,4 +1,4 @@
-package entGenericsSetMap;
+package entGenerics;
 
 public class Product implements Comparable<Product> {
 

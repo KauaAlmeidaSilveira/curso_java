@@ -1,4 +1,4 @@
-package GenericsSetMap;
+package Generics;
 
 
 

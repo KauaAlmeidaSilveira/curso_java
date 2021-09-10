@@ -1,6 +1,6 @@
-package entGenericsSetMap;
+package entGenerics;
 
-import servGerericsSetMap.Shape;
+import servGererics.Shape;
 
 public class Circle implements Shape {
 

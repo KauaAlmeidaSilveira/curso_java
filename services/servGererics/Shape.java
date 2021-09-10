@@ -1,4 +1,4 @@
-package servGerericsSetMap;
+package servGererics;
 
 public interface Shape {
 

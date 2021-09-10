@@ -1,11 +1,11 @@
-package GenericsSetMap;
+package Generics;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import entGenericsSetMap.Circle;
-import entGenericsSetMap.Rectangle;
-import servGerericsSetMap.Shape;
+import entGenerics.Circle;
+import entGenerics.Rectangle;
+import servGererics.Shape;
 
 public class Exercicio04 {
 

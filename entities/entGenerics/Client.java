@@ -1,4 +1,4 @@
-package entGenericsSetMap;
+package entGenerics;
 
 import java.util.Objects;
 
