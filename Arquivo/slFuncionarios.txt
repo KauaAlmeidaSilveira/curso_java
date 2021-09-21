@@ -1,0 +1,6 @@
+Kauã,kauaa6a@gmail.com,4500.00
+João,soldadojhon007@gmail.com,5500.00
+Leandro,leandro@startsolucao.com.br,9700.00
+Tiago,tiago@startsolucao.com.br,5600.00
+Silveira,silveira@gmail.com,7700.00
+Kauan,kauiis.a.silveira@gmail.com,5600.00

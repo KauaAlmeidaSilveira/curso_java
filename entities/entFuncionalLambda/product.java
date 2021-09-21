@@ -57,7 +57,7 @@ public class product {
 	
 	 @Override
 	public String toString() {
-		return "Name: "+ name + ", price: "+price;
+		return "Name: "+ name + ", price: "+ String.format("%.2f", price);
 	}
 	
 }

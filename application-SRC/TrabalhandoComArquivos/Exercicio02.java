@@ -8,7 +8,7 @@ public class Exercicio02 {
 
 	public static void main(String[] args) {
 		
-		String path = "C:\\Users\\kauaa\\Desktop\\Tudo\\Programação\\WorkSpace\\curso_java\\in.txt";
+		String path = "C:\\Users\\kauaa\\Desktop\\Tudo\\Programação\\WorkSpace\\curso_java\\Arquivo\\produtos.txt";
 		
 		try (BufferedReader br = new BufferedReader(new FileReader(path))){
 			
