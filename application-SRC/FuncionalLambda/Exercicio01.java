@@ -14,6 +14,9 @@ public class Exercicio01 {
 		list.add(new product("TV", 900.00));
 		list.add(new product("Notebook", 1200.00));
 		list.add(new product("Tablet", 450.00));
+
+
+		
 		
 		/*   SEM LAMBDA
 		 
