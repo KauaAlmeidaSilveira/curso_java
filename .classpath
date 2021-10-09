@@ -4,7 +4,7 @@
 	<classpathentry kind="src" path="entities"/>
 	<classpathentry kind="src" path="Exceptions"/>
 	<classpathentry kind="src" path="services"/>
-	<classpathentry kind="src" path="database"/>
+	<classpathentry kind="src" path="JDBC"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11">
 		<attributes>
 			<attribute name="module" value="true"/>

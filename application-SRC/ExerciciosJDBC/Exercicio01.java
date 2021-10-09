@@ -1,13 +1,12 @@
-package jdbc;
+package ExerciciosJDBC;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 import db.DB;
-import db.DbIntegrityException;
 
-public class Exercicio04 {
+public class Exercicio01 {
 
 	public static void main(String[] args) {
 		
@@ -18,16 +17,21 @@ public class Exercicio04 {
 		try {
 			conn = DB.getConnection();
 			
-			st = conn.prepareStatement("DELETE FROM department WHERE Id = ?");
-	
-			st.setInt(1, 2);
+			st = conn.prepareStatement(
+					"UPDATE seller "
+					+ "SET BaseSalary = BaseSalary + ? "
+					+ "WHERE "
+					+ "(Id = ?)");
+					
+			st.setDouble(1, 1000.0);
+			st.setInt(2, 7);
 			
 			int rowsAffected = st.executeUpdate();
 			
 			System.out.println("Done! Rows Affected: " + rowsAffected);
 		
 		}catch(SQLException e) {
-			throw new DbIntegrityException(e.getMessage());
+			e.printStackTrace();
 		}
 		
 		finally {

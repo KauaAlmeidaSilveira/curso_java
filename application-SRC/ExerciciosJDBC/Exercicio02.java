@@ -1,4 +1,4 @@
-package jdbc;
+package ExerciciosJDBC;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
